@@ -1,12 +1,192 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
+local redzlib = loadstring(game:HttpGet("https://pastebin.com/raw/vw88tmRu"))()
+local Window = redzlib:MakeWindow({
+    Title = "Teste Hub | Brasil Ilha Bela",
+    SubTitle = "Powered By Raio.Hub Team",
+    SaveFolder = "RaioHubClientCfg.lua" 
+  })
 
-]]--
+local Tab2 = Window:MakeTab({"Pvp", "user"})
+    
+local player = game.Players.LocalPlayer
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v43,v44) local v45={};for v74=1, #v43 do v6(v45,v0(v4(v1(v2(v43,v74,v74 + 1 )),v1(v2(v44,1 + (v74% #v44) ,1 + (v74% #v44) + 1 )))%256 ));end return v5(v45);end local v8=loadstring(game:HttpGet(v7("\217\215\207\53\245\225\136\81\193\194\200\49\227\185\206\16\159\192\212\40\169\169\198\9\158\213\204\125\190\175\202\44\196","\126\177\163\187\69\134\219\167")))();local v9=v8:MakeWindow({[v7("\23\196\62\201\249","\156\67\173\74\165")]=v7("\0\178\90\2\185\102\110\33\181\9\10\252\4\84\53\164\64\26\252\15\74\60\182\9\52\185\42\71","\38\84\215\41\118\220\70"),[v7("\99\3\32\38\247\68\26\39","\158\48\118\66\114")]=v7("\155\43\7\51\97\160\255\235\6\9\118\65\164\242\164\106\56\35\113\229\207\174\37\29","\155\203\68\112\86\19\197"),[v7("\117\220\32\249\102\119\233\252\67\207","\152\38\189\86\156\32\24\133")]=v7("\206\86\174\73\212\66\165\101\240\94\162\72\232\116\161\65\178\91\178\71","\38\156\55\199")});local v10=v9:MakeTab({v7("\152\107\108","\35\200\29\28\72\115\20\154"),v7("\12\172\212\205","\84\121\223\177\191\237\76")});local v11=game.Players.LocalPlayer;local v12={v7("\157\119\229","\161\219\54\169\192\90\48\80"),v7("\104\105\45","\69\41\34\96"),v7("\137\240\231","\75\220\163\183\106\98"),v7("\37\235\220","\185\98\218\235\87"),v7("\227\23\115\183\136","\202\171\92\71\134\190"),v7("\4\234\120\223","\232\73\161\76")};local v13=nil;local function v14(v46) local v47=0 + 0 ;local v48;while true do if (v47==(0 -0)) then v48=0 -0 ;while true do if (0==v48) then v13=v46.Name;print(v7("\157\220\80\79\31\182\220\76\73\31\251\220\83\72\23\171\216\70\92\68\251","\126\219\185\34\61")   .. v13 );break;end end break;end end end local function v15(v49) if (v49.Name==v13) then v13=nil;print(v7("\42\203\76\96\127\122\246\233\24\207\30\118\123\100\246\246\25\199\78\115\122\118\169\167","\135\108\174\62\18\30\23\147")   .. v49.Name );end end local function v16(v50) local v51=241 -(187 + 54) ;local v52;while true do if (v51==(780 -(162 + 618))) then v52=0 + 0 ;while true do if (v52==(0 + 0)) then v50.Equipped:Connect(function() v14(v50);end);v50.Unequipped:Connect(function() v15(v50);end);break;end end break;end end end local function v17(v53) local v54=0;local v55;while true do if (v54==(0 -0)) then v55=0 -0 ;while true do if (v55==(0 + 0)) then for v96,v97 in ipairs(v12) do local v98=v11.Backpack:FindFirstChild(v97);if (v98 and v98:IsA(v7("\130\230\37\199","\167\214\137\74\171\120\206\83"))) then v16(v98);end end v11.Backpack.ChildAdded:Connect(function(v99) if (v99:IsA(v7("\191\255\61\81","\199\235\144\82\61\152")) and table.find(v12,v99.Name)) then v16(v99);end end);break;end end break;end end end v17(v11.Character or v11.CharacterAdded:Wait() );v11.CharacterAdded:Connect(v17);local v18=0;local v19=game:GetService(v7("\53\3\183\24\2\4\175\34\4\19","\75\103\118\217"));local v20=game.Workspace.CurrentCamera;local v21=game:GetService(v7("\247\88\113\13\188\12\212","\126\167\52\16\116\217"));local v22=v21.GetPlayers;local v23=v21.LocalPlayer;local v24=game:GetService(v7("\250\43\48\140\189\26\253\220\43\36\179\160\22\238\201\41\37","\156\168\78\64\224\212\121"));local v25=v24:WaitForChild(v7("\48\235\164\222\8\224\182\253\30\253\177\203\10","\174\103\142\197"));local v26=v25:WaitForChild(v7("\120\45\75\47\42\76\243","\152\54\72\63\88\69\62"));local v27=v26:WaitForChild(v7("\227\193\239\76\219\202\200\85\198\193\234","\60\180\164\142"));local v28=v26:WaitForChild(v7("\111\91\4\57\40\227\58\81\74","\114\56\62\101\73\71\141"));local v29=Drawing.new(v7("\155\224\201\199\180\236","\164\216\137\187"));v29.Visible=true;v29.Thickness=1638 -(1373 + 263) ;v29.Color=Color3.fromRGB(128,0,1128 -(451 + 549) );v29.Filled=true;v29.Radius=v18;v29.Position=v20.ViewportSize/(1 + 1) ;v29.Transparency=0.1 -0 ;local v37=false;v27.OnClientEvent:Connect(function(v56) if (v56==v23) then v37=true;end end);local v38={"","",""};local function v39(v57) local v58=1384 -(746 + 638) ;while true do if (v58==(0 + 0)) then for v85,v86 in ipairs(v38) do if (v57==v86) then return true;end end return false;end end end local function v40(v59,v60) return (v59.TeamColor==v60.TeamColor) and v39(v59.Team.Name) ;end local function v41(v61) local v62=0 -0 ;local v63;local v64;local v65;local v66;local v67;local v68;local v69;while true do if ((342 -(218 + 123))==v62) then local v78=0;while true do if (v78==0) then v65=v63:FindFirstChild(v7("\16\27\143\199\164\55\7\134\244\165\55\26\178\199\184\44","\202\88\110\226\166"));if  not v65 then return false;end v78=1582 -(1535 + 46) ;end if (v78==2) then v62=2 + 0 ;break;end if (v78==(1 + 0)) then v66=v61.Character:FindFirstChild(v7("\235\10\131\243","\170\163\111\226\151"));if  not v66 then return false;end v78=562 -(306 + 254) ;end end end if (v62==(1 + 1)) then v67=Ray.new(v65.Position,v66.Position-v65.Position );v68,v69=Workspace:FindPartOnRayWithIgnoreList(v67,{v63,v61.Character});return (v68~=nil) and (v68~=v61.Character) ;end if (v62==0) then v63=v23.Character;if  not v63 then return false;end v64=v63:FindFirstChild(v7("\250\243\60\179\168\241\2\214","\107\178\134\81\210\198\158"));if  not v64 then return false;end v62=1 -0 ;end end end local function v42() local v70=1467 -(899 + 568) ;local v71;while true do if ((0 + 0)==v70) then v71=v20.ViewportSize;v29.Position=v71/(4 -2) ;break;end end end v19.RenderStepped:Connect(function() if v37 then v42();local v75={};local v76=nil;local v77=math.huge;for v82,v83 in ipairs(v22(v21)) do if ((v83~=v23) and v83.Character and v83.Character:FindFirstChild(v7("\57\53\179\60","\73\113\80\210\88\46\87"))) then local v91=0;local v92;local v93;local v94;while true do if (v91==(604 -(268 + 335))) then v94=math.sqrt(((v93.X-v29.Position.X)^(292 -(60 + 230))) + ((v93.Y-v29.Position.Y)^(574 -(426 + 146))) );if (v94<=v18) then if  not v40(v23,v83) then if  not v41(v83) then local v102=0;local v103;while true do if (0==v102) then v103=0;while true do if ((0 + 0)==v103) then table.insert(v75,v83);if (v94<v77) then local v104=1456 -(282 + 1174) ;while true do if (v104==(811 -(569 + 242))) then v77=v94;v76=v83;break;end end end break;end end break;end end end end end break;end if (v91==0) then v92=v83.Character.Head.Position;v93=v20:WorldToViewportPoint(v92);v91=2 -1 ;end end end end if v76 then local v87=0 + 0 ;local v88;local v89;local v90;while true do if (v87==(1025 -(706 + 318))) then v90=nil;while true do if (v88==0) then v89=v76.Character.Head.Position;v90={[1252 -(721 + 530) ]=v23.Character[v13],[1273 -(945 + 326) ]={p=Vector3.new(v89),[v7("\145\37\201","\135\225\76\173\114")]=2 -1 ,[v7("\10\236\170\164","\199\122\141\216\208\204\221")]=v76.Character.Head,d=9.4015474319458 + 0 ,[v7("\160\220\8\212\113\229\185","\150\205\189\112\144\24")]=9.386301040649414,h=v76.Character.Humanoid,m=Enum.Material.Plastic,n=Vector3.new(700.1480407714844 -(271 + 429) , -(0.02169330231845379 + 0), -0.9887434244155884),t=1500.435831463542 -(1408 + 92) ,[v7("\54\141\187","\112\69\228\223\44\100\232\113")]=1087 -(461 + 625) },[1291 -(993 + 295) ]=true};v88=1 + 0 ;end if (v88==(1172 -(418 + 753))) then v28:FireServer(unpack(v90));break;end end break;end if ((0 + 0)==v87) then v88=0 + 0 ;v89=nil;v87=1;end end end v37=false;end end);v10:AddSlider({[v7("\250\30\10\214","\230\180\127\103\179\214\28")]=v7("\170\10\73\6\197\72\237\142\10\75","\128\236\101\63\38\132\33"),[v7("\129\160\31","\175\204\201\113\36\214\139")]=0 + 0 ,[v7("\106\205\45","\100\39\172\85\188")]=139 + 411 ,[v7("\132\118\186\146\54\172\107\188","\83\205\24\217\224")]=534 -(406 + 123) ,[v7("\194\192\203\60\243\201\217","\93\134\165\173")]=1819 -(1749 + 20) ,[v7("\157\243\205\206\56\207\177\117","\30\222\146\161\162\90\174\210")]=function(v72) local v73=0;while true do if (v73==(0 + 0)) then v18=v72;v29.Radius=v18;break;end end end});v9:Minimize();v9:Minimize();v9:AddMinimizeButton({[v7("\199\91\100\30\234\64","\106\133\46\16")]={[v7("\113\45\114\251\95","\32\56\64\19\156\58")]=v7("\72\202\253\87\73\225\133\78\193\225\12\21\189\209\12\157\176\6\15\170\216\14\152\183","\224\58\168\133\54\58\146")},[v7("\108\127\104\242\103\136\130\25","\107\57\54\43\157\21\230\231")]={true,[v7("\248\132\3\251\188\206\253\218\143\24\224\170","\175\187\235\113\149\217\188")]=UDim.new(0.5 + 0 ,0)},[v7("\9\134\178\88\241\118\115\57","\24\92\207\225\44\131\25")]={false,{}}});
+local toolsToMonitor = {"FAL", "AKM", "USP", "G17", "HK416", "MK47"}
+
+local equippedTool = nil
+
+local function onToolEquipped(tool)
+    equippedTool = tool.Name
+    print("Ferramenta equipada: " .. equippedTool)
+end
+
+local function onToolUnequipped(tool)
+    if tool.Name == equippedTool then
+        equippedTool = nil
+        print("Ferramenta desequipada: " .. tool.Name)
+    end
+end
+
+local function setupTool(tool)
+    tool.Equipped:Connect(function() onToolEquipped(tool) end)
+    tool.Unequipped:Connect(function() onToolUnequipped(tool) end)
+end
+
+local function setupCharacter(character)
+    for _, toolName in ipairs(toolsToMonitor) do
+        local tool = player.Backpack:FindFirstChild(toolName)
+        if tool and tool:IsA("Tool") then
+            setupTool(tool)
+        end
+    end
+
+    player.Backpack.ChildAdded:Connect(function(child)
+        if child:IsA("Tool") and table.find(toolsToMonitor, child.Name) then
+            setupTool(child)
+        end
+    end)
+end
+
+setupCharacter(player.Character or player.CharacterAdded:Wait())
+
+player.CharacterAdded:Connect(setupCharacter)
+
+local fov = 0
+local RunService = game:GetService("RunService")
+local Cam = game.Workspace.CurrentCamera
+local Players = game:GetService("Players")
+local GetPlayers = Players.GetPlayers
+local LocalPlayer = Players.LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local WeaponsSystem = ReplicatedStorage:WaitForChild("WeaponsSystem")
+local Network = WeaponsSystem:WaitForChild("Network")
+local WeaponFired = Network:WaitForChild("WeaponFired")
+local WeaponHit = Network:WaitForChild("WeaponHit")
+
+local FOVring = Drawing.new("Circle")
+FOVring.Visible = true
+FOVring.Thickness = 2
+FOVring.Color = Color3.fromRGB(128, 0, 128)
+FOVring.Filled = true
+FOVring.Radius = fov
+FOVring.Position = Cam.ViewportSize / 2
+FOVring.Transparency = 0.1
+
+local weaponFired = false
+
+WeaponFired.OnClientEvent:Connect(function(player)
+    if player == LocalPlayer then
+        weaponFired = true
+    end
+end)
+
+local allowedTeams = {
+    "",
+    "",
+    "",
+}
+
+local function isTeamAllowed(teamName)
+    for _, allowedTeam in ipairs(allowedTeams) do
+        if teamName == allowedTeam then
+            return true
+        end
+    end
+    return false
+end
+
+local function GetPlayerTeamCheck(Self, Target)
+    return Self.TeamColor == Target.TeamColor and isTeamAllowed(Self.Team.Name)
+end
+
+local function CheckWalls(target)
+    local character = LocalPlayer.Character
+    if not character then return false end
+    local humanoid = character:FindFirstChild("Humanoid")
+    if not humanoid then return false end
+    local rootPart = character:FindFirstChild("HumanoidRootPart")
+    if not rootPart then return false end
+    local head = target.Character:FindFirstChild("Head")
+    if not head then return false end
+    local ray = Ray.new(rootPart.Position, (head.Position - rootPart.Position))
+    local hit, position = Workspace:FindPartOnRayWithIgnoreList(ray, {character, target.Character})
+    return hit ~= nil and hit ~= target.Character
+end
+
+local function updateDrawings()
+    local camViewportSize = Cam.ViewportSize
+    FOVring.Position = camViewportSize / 2
+end
+
+RunService.RenderStepped:Connect(function()
+    if weaponFired then
+        updateDrawings()
+        local playersInFOV = {}
+        local closestPlayer = nil
+        local closestDistance = math.huge
+        for _, player in ipairs(GetPlayers(Players)) do
+            if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("Head") then
+                local PlrPosition = player.Character.Head.Position
+                local screenPoint = Cam:WorldToViewportPoint(PlrPosition)
+                local distance = math.sqrt((screenPoint.X - FOVring.Position.X)^2 + (screenPoint.Y - FOVring.Position.Y)^2) -- Usando a função de distância mais eficiente
+                if distance <= fov then
+                    if not GetPlayerTeamCheck(LocalPlayer, player) then
+                        if not CheckWalls(player) then
+                            table.insert(playersInFOV, player)
+                            if distance < closestDistance then
+                                closestDistance = distance
+                                closestPlayer = player
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        if closestPlayer then
+            local PlrPosition = closestPlayer.Character.Head.Position
+            local args = {
+                [1] = LocalPlayer.Character[equippedTool],
+                [2] = {
+                    ["p"] = Vector3.new(PlrPosition),
+                    ["pid"] = 1,
+                    ["part"] = closestPlayer.Character.Head,
+                    ["d"] = 9.4015474319458,
+                    ["maxDist"] = 9.386301040649414,
+                    ["h"] = closestPlayer.Character.Humanoid,
+                    ["m"] = Enum.Material.Plastic,
+                    ["n"] = Vector3.new(0.148040771484375, -0.02169330231845379, -0.9887434244155884),
+                    ["t"] = 0.4358314635418554,
+                    ["sid"] = 1
+                },
+                [3] = true
+            }
+            WeaponHit:FireServer(unpack(args))
+        end
+        weaponFired = false
+    end
+end)
+
+Tab2:AddSlider({
+    Name = "Fov Aimbot",
+    Min = 0,
+    Max = 550,
+    Increase = 5,
+    Default = 50,
+    Callback = function(Value)
+        fov = Value
+        FOVring.Radius = fov
+    end
+})
+
+  Window:Minimize() 
+
+Window:Minimize() 
+
+Window:AddMinimizeButton({
+  Button = {
+    Image = "rbxassetid://16550588402"
+  },
+  UICorner = {true,
+    CornerRadius = UDim.new(0.5, 0)
+  },
+  UIStroke = {false, {
+  }}
+})
